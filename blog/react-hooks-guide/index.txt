@@ -1,0 +1,209 @@
+1:"$Sreact.fragment"
+2:I[3274,["177","static/chunks/app/layout-b66b217910cc1f60.js"],"AuthProvider"]
+3:I[7555,[],""]
+4:I[1295,[],""]
+6:I[9665,[],"OutletBoundary"]
+9:I[4911,[],"AsyncMetadataOutlet"]
+b:I[9665,[],"ViewportBoundary"]
+d:I[9665,[],"MetadataBoundary"]
+f:I[6614,[],""]
+:HL["/blog_out/_next/static/css/f3e5ca8829696620.css","style"]
+0:{"P":null,"b":"-P4br9-qRugZFEG3KuYsL","p":"/blog_out","c":["","blog","react-hooks-guide",""],"i":false,"f":[[["",{"children":["blog",{"children":[["slug","react-hooks-guide","d"],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/blog_out/_next/static/css/f3e5ca8829696620.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"zh-CN","children":["$","body",null,{"className":"font-sans antialiased","children":["$","$L2",null,{"children":["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}]}]}]]}],{"children":["blog",["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["slug","react-hooks-guide","d"],["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":["$L5",null,["$","$L6",null,{"children":["$L7","$L8",["$","$L9",null,{"promise":"$@a"}]]}]]}],{},null,false]},null,false]},null,false]},null,false],["$","$1","h",{"children":[null,["$","$1","sm2CPDo9g57riDFvVRQNCv",{"children":[["$","$Lb",null,{"children":"$Lc"}],null]}],["$","$Ld",null,{"children":"$Le"}]]}],false]],"m":"$undefined","G":["$f","$undefined"],"s":false,"S":true}
+10:I[3343,["490","static/chunks/490-96aefbe6242bfb60.js","445","static/chunks/445-c45b34b80992edb4.js","7","static/chunks/7-720233d9e5e40eac.js","343","static/chunks/343-6bf777c94fd7005b.js","953","static/chunks/app/blog/%5Bslug%5D/page-bebc1a8d791b911b.js"],"default"]
+11:I[6874,["490","static/chunks/490-96aefbe6242bfb60.js","445","static/chunks/445-c45b34b80992edb4.js","7","static/chunks/7-720233d9e5e40eac.js","343","static/chunks/343-6bf777c94fd7005b.js","953","static/chunks/app/blog/%5Bslug%5D/page-bebc1a8d791b911b.js"],""]
+12:I[9741,["490","static/chunks/490-96aefbe6242bfb60.js","445","static/chunks/445-c45b34b80992edb4.js","7","static/chunks/7-720233d9e5e40eac.js","343","static/chunks/343-6bf777c94fd7005b.js","953","static/chunks/app/blog/%5Bslug%5D/page-bebc1a8d791b911b.js"],"default"]
+14:"$Sreact.suspense"
+15:I[4911,[],"AsyncMetadata"]
+13:T12db,# React Hooks 完全指南
+
+React Hooks 是 React 16.8 引入的新特性，它让你在不编写 class 的情况下使用 state 以及其他的 React 特性。
+
+> 💡 **提示**: Hooks 让函数组件拥有了类组件的能力，这是 React 发展史上的重要里程碑。
+
+## 什么是 Hooks？
+
+Hooks 是一些可以让你在函数组件里"钩入" React state 及生命周期等特性的函数。它们的命名都以 `use` 开头。
+
+## 最常用的 Hooks 对比
+
+| Hook | 用途 | 返回值 | 使用场景 |
+|------|------|--------|----------|
+| `useState` | 状态管理 | `[state, setState]` | 组件需要内部状态 |
+| `useEffect` | 副作用处理 | `void` | 数据获取、订阅、DOM 操作 |
+| `useContext` | 消费 Context | `contextValue` | 跨组件数据共享 |
+| `useReducer` | 复杂状态管理 | `[state, dispatch]` | 复杂的状态逻辑 |
+
+### 1. useState
+
+`useState` 是最基本的 Hook，它让函数组件也能使用状态。
+
+```javascript
+import React, { useState } from 'react';
+
+function Counter() {
+  const [count, setCount] = useState(0);
+
+  return (
+    <div>
+      <p>你点击了 {count} 次</p>
+      <button onClick={() => setCount(count + 1)}>
+        点击我
+      </button>
+    </div>
+  );
+}
+```
+
+**关键特性：**
+- 返回一个状态值和更新函数
+- 可以传入初始值或初始化函数
+- 状态更新是异步的
+
+### 2. useEffect
+
+`useEffect` 让你在函数组件中执行副作用操作。
+
+```typescript
+import React, { useState, useEffect } from 'react';
+
+function Example() {
+  const [count, setCount] = useState(0);
+
+  // 类似 componentDidMount 和 componentDidUpdate
+  useEffect(() => {
+    document.title = `你点击了 ${count} 次`;
+  });
+
+  // 带清理的副作用
+  useEffect(() => {
+    const timer = setInterval(() => {
+      console.log('Timer tick');
+    }, 1000);
+
+    // 清理函数（类似 componentWillUnmount）
+    return () => clearInterval(timer);
+  }, []); // 空依赖数组，只在挂载时执行
+
+  return (
+    <div>
+      <p>你点击了 {count} 次</p>
+      <button onClick={() => setCount(count + 1)}>
+        点击我
+      </button>
+    </div>
+  );
+}
+```
+
+### 3. useContext
+
+`useContext` 让你可以订阅 React 的 Context，而不需要嵌套。
+
+```javascript
+const ThemeContext = React.createContext();
+
+function Button() {
+  const theme = useContext(ThemeContext);
+  return (
+    <button style={{ background: theme.background }}>
+      我是一个按钮
+    </button>
+  );
+}
+```
+
+## 自定义 Hooks
+
+自定义 Hooks 是复用组件逻辑的强大方式：
+
+```typescript
+// 自定义计数器 Hook
+function useCounter(initialValue: number = 0) {
+  const [count, setCount] = useState(initialValue);
+  
+  const increment = useCallback(() => setCount(count + 1), [count]);
+  const decrement = useCallback(() => setCount(count - 1), [count]);
+  const reset = useCallback(() => setCount(initialValue), [initialValue]);
+  
+  return { count, increment, decrement, reset };
+}
+
+// 使用自定义 Hook
+function MyComponent() {
+  const { count, increment, decrement, reset } = useCounter(10);
+  
+  return (
+    <div>
+      <p>计数: {count}</p>
+      <button onClick={increment}>+</button>
+      <button onClick={decrement}>-</button>
+      <button onClick={reset}>重置</button>
+    </div>
+  );
+}
+```
+
+## Hooks 规则
+
+> ⚠️ **重要**: 以下规则必须严格遵守，否则可能导致难以调试的错误。
+
+1. **只在函数最顶层调用 Hook**
+   - ❌ 不要在循环、条件或嵌套函数中调用
+   - ✅ 确保每次渲染时 Hook 的调用顺序相同
+
+2. **只在 React 函数中调用 Hook**
+   - ✅ React 函数组件
+   - ✅ 自定义 Hook
+
+3. **使用 ESLint 插件来强制执行这些规则**
+
+```bash
+npm install eslint-plugin-react-hooks --save-dev
+```
+
+## 性能优化相关 Hooks
+
+### useMemo 和 useCallback
+
+```javascript
+function ExpensiveComponent({ items, onClick }) {
+  // 缓存计算结果
+  const expensiveValue = useMemo(() => {
+    return items.reduce((sum, item) => sum + item.value, 0);
+  }, [items]);
+
+  // 缓存回调函数
+  const memoizedCallback = useCallback(() => {
+    onClick(expensiveValue);
+  }, [onClick, expensiveValue]);
+
+  return (
+    <div>
+      <p>总值: {expensiveValue}</p>
+      <button onClick={memoizedCallback}>点击</button>
+    </div>
+  );
+}
+```
+
+## 总结
+
+React Hooks 提供了一种更直接的 API 来使用你已知的 React 概念：
+
+- **状态管理**: `useState`, `useReducer`
+- **副作用**: `useEffect`
+- **性能优化**: `useMemo`, `useCallback`
+- **上下文**: `useContext`
+- **引用**: `useRef`
+
+它们简化了组件逻辑，使代码更容易理解和测试，同时提供了强大的组合能力。
+
+---
+
+*希望这个指南对你学习 React Hooks 有所帮助！如果你有任何问题，欢迎在评论区讨论。*5:["$","div",null,{"className":"min-h-screen bg-gray-50","children":[["$","$L10",null,{}],["$","article",null,{"className":"max-w-4xl mx-auto py-12 px-4 sm:px-6 lg:px-8","children":[["$","div",null,{"className":"mb-8","children":["$","$L11",null,{"href":"/blog","className":"inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors","children":[["$","svg",null,{"className":"w-4 h-4 mr-2","fill":"none","stroke":"currentColor","viewBox":"0 0 24 24","children":["$","path",null,{"strokeLinecap":"round","strokeLinejoin":"round","strokeWidth":2,"d":"M15 19l-7-7 7-7"}]}],"返回文章列表"]}]}],["$","div",null,{"ref":"$undefined","className":"rounded-lg bg-white transition-all duration-200 shadow-md p-4 mb-8","children":["$","div",null,{"ref":"$undefined","className":"pt-8","children":["$","div",null,{"className":"text-center mb-8","children":[["$","h1",null,{"className":"text-4xl font-bold text-gray-900 mb-4","children":"React Hooks 完全指南"}],["$","p",null,{"className":"text-xl text-gray-600 mb-6","children":"深入了解 React Hooks 的使用方法和最佳实践，包括 useState、useEffect 等常用 Hooks。"}],["$","div",null,{"className":"flex flex-wrap items-center justify-center gap-4 text-sm text-gray-500 mb-6","children":[["$","div",null,{"className":"flex items-center","children":[["$","svg",null,{"className":"w-4 h-4 mr-1","fill":"none","stroke":"currentColor","viewBox":"0 0 24 24","children":["$","path",null,{"strokeLinecap":"round","strokeLinejoin":"round","strokeWidth":2,"d":"M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"}]}],"kdnlfa"]}],["$","div",null,{"className":"flex items-center","children":[["$","svg",null,{"className":"w-4 h-4 mr-1","fill":"none","stroke":"currentColor","viewBox":"0 0 24 24","children":["$","path",null,{"strokeLinecap":"round","strokeLinejoin":"round","strokeWidth":2,"d":"M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"}]}],"2024-01-15"]}],["$","div",null,{"className":"flex items-center","children":[["$","svg",null,{"className":"w-4 h-4 mr-1","fill":"none","stroke":"currentColor","viewBox":"0 0 24 24","children":["$","path",null,{"strokeLinecap":"round","strokeLinejoin":"round","strokeWidth":2,"d":"M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"}]}],"8 分钟"]}],["$","div",null,{"className":"flex items-center","children":[["$","svg",null,{"className":"w-4 h-4 mr-1","fill":"none","stroke":"currentColor","viewBox":"0 0 24 24","children":[["$","path",null,{"strokeLinecap":"round","strokeLinejoin":"round","strokeWidth":2,"d":"M15 12a3 3 0 11-6 0 3 3 0 016 0z"}],["$","path",null,{"strokeLinecap":"round","strokeLinejoin":"round","strokeWidth":2,"d":"M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"}]]}],1234," 次阅读"]}]]}],["$","div",null,{"className":"flex flex-wrap items-center justify-center gap-2","children":[["$","span",null,{"ref":"$undefined","className":"inline-flex items-center rounded-full font-medium transition-colors bg-blue-100 text-blue-800 px-2.5 py-0.5 text-xs","children":"React"}],[["$","span","React",{"ref":"$undefined","className":"inline-flex items-center rounded-full font-medium transition-colors border border-gray-300 text-gray-700 px-2.5 py-0.5 text-xs","children":"React"}],["$","span","Hooks",{"ref":"$undefined","className":"inline-flex items-center rounded-full font-medium transition-colors border border-gray-300 text-gray-700 px-2.5 py-0.5 text-xs","children":"Hooks"}],["$","span","前端开发",{"ref":"$undefined","className":"inline-flex items-center rounded-full font-medium transition-colors border border-gray-300 text-gray-700 px-2.5 py-0.5 text-xs","children":"前端开发"}]]]}]]}]}]}],["$","div",null,{"ref":"$undefined","className":"rounded-lg bg-white transition-all duration-200 shadow-md p-4","children":["$","div",null,{"ref":"$undefined","className":"pt-8","children":["$","div",null,{"className":"max-w-none","children":["$","$L12",null,{"content":"$13"}]}]}]}],["$","div",null,{"ref":"$undefined","className":"rounded-lg bg-white transition-all duration-200 shadow-md p-4 mt-8","children":["$","div",null,{"ref":"$undefined","className":"pt-6","children":["$","div",null,{"className":"flex flex-wrap items-center justify-between gap-4","children":[["$","div",null,{"className":"flex items-center space-x-4","children":[["$","button",null,{"ref":"$undefined","className":"inline-flex items-center justify-center rounded-md font-medium transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-gray-300 bg-transparent text-gray-700 hover:bg-gray-50 focus-visible:ring-gray-500 h-8 px-3 text-sm w-auto","disabled":false,"children":[null,["$","span",null,{"children":[["$","svg",null,{"className":"w-4 h-4 mr-2","fill":"none","stroke":"currentColor","viewBox":"0 0 24 24","children":["$","path",null,{"strokeLinecap":"round","strokeLinejoin":"round","strokeWidth":2,"d":"M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"}]}],"喜欢"]}],"$undefined"]}],["$","button",null,{"ref":"$undefined","className":"inline-flex items-center justify-center rounded-md font-medium transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-gray-300 bg-transparent text-gray-700 hover:bg-gray-50 focus-visible:ring-gray-500 h-8 px-3 text-sm w-auto","disabled":false,"children":[null,["$","span",null,{"children":[["$","svg",null,{"className":"w-4 h-4 mr-2","fill":"none","stroke":"currentColor","viewBox":"0 0 24 24","children":["$","path",null,{"strokeLinecap":"round","strokeLinejoin":"round","strokeWidth":2,"d":"M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.367 2.684 3 3 0 00-5.367-2.684z"}]}],"分享"]}],"$undefined"]}]]}],["$","div",null,{"className":"text-sm text-gray-500","children":["最后更新：","2024-01-15"]}]]}]}]}]]}]]}]
+e:["$","div",null,{"hidden":true,"children":["$","$14",null,{"fallback":null,"children":["$","$L15",null,{"promise":"$@16"}]}]}]
+8:null
+c:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+7:null
+a:{"metadata":[["$","title","0",{"children":"我的个人博客"}],["$","meta","1",{"name":"description","content":"基于Next.js构建的现代化个人博客"}],["$","link","2",{"rel":"icon","href":"/blog_out/favicon.ico","type":"image/x-icon","sizes":"16x16"}]],"error":null,"digest":"$undefined"}
+16:{"metadata":"$a:metadata","error":null,"digest":"$undefined"}
